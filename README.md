@@ -1,3 +1,5 @@
+FiveM Entity Logs
+
 Vehicle Logging:
 
 Logs vehicle spawns when a player enters a vehicle.
