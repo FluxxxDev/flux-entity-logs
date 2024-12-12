@@ -15,7 +15,6 @@ Citizen.CreateThread(function()
 
                 if not loggedVehicles[networkId] then
                     loggedVehicles[networkId] = true
-                    print(string.format("[DEBUG] Logging Vehicle Spawn - Model: %s, SpawnCode: %s, Network ID: %s", model, spawnCode, networkId))
                     TriggerServerEvent('logSpawnEvent', "Vehicle", model, spawnCode, networkId, GetPlayerName(PlayerId()), GetPlayerServerId(PlayerId()))
                 end
             end
@@ -32,7 +31,6 @@ Citizen.CreateThread(function()
 
                 if not loggedProps[networkId] then
                     loggedProps[networkId] = true
-                    print(string.format("[DEBUG] Logging Prop Spawn - Model: %s, Network ID: %s", model, networkId))
                     TriggerServerEvent('logSpawnEvent', "Prop", model, nil, networkId, GetPlayerName(PlayerId()), GetPlayerServerId(PlayerId()))
                 end
             end
