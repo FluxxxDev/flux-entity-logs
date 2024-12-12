@@ -18,10 +18,3 @@ AddEventHandler('logSpawnEvent', function(spawnType, model, spawnCode, networkId
 
     PerformHttpRequest(Config.WebhookURL, function(err, text, headers) end, 'POST', json.encode({username = "Flux Entity Logs", embeds = message}), {['Content-Type'] = 'application/json'})
 end)
-
-
-print("[DEBUG] Entity Logs are now Logging")
-print("[DEBUG] Webhook URL: " .. Config.WebhookURL)
-print("[DEBUG] Log Vehicles: " .. tostring(Config.LogVehicles))
-print("[DEBUG] Log Props: " .. tostring(Config.LogProps))
-
